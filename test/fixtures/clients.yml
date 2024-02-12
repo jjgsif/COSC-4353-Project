@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  clientName: MyString
+  ordersPlaced: 1
+  newCustomer: false
+  dateJoined: 2024-02-12 12:06:26
+
+two:
+  clientName: MyString
+  ordersPlaced: 1
+  newCustomer: false
+  dateJoined: 2024-02-12 12:06:26
