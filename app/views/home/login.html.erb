@@ -1,1 +1,25 @@
-<h1> Login Screen </h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <%= stylesheet_link_tag 'loginstyle' %>
+</head>
+
+    <body>
+        <div class="login-page">
+            <div class="form">
+                <div class="login">
+                    <div class="login-header">
+                        <h3>LOGIN</h3>
+                        <p>Enter your credentials to login.</p>
+                    </div>
+                </div>
+                <form class="login-form" action="" method="POST">
+                    <input type="text" id="username" name="username" placeholder="Enter Username"/>
+                    <input type="password" id="password" name="password" placeholder="Enter Password"/>
+                <button type="submit">login</button>
+                <p class="message">Not registered? <a href="#"> Create an account</a></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

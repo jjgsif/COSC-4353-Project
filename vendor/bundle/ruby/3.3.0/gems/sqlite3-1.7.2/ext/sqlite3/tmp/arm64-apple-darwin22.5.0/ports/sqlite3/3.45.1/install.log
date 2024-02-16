@@ -1,0 +1,15 @@
+ /opt/homebrew/bin/gmkdir -p '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib'
+ /bin/sh ./libtool   --mode=install /opt/homebrew/bin/ginstall -c   libsqlite3.la '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib'
+libtool: install: /opt/homebrew/bin/ginstall -c .libs/libsqlite3.lai /Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib/libsqlite3.la
+libtool: install: /opt/homebrew/bin/ginstall -c .libs/libsqlite3.a /Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib/libsqlite3.a
+libtool: install: chmod 644 /Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib/libsqlite3.a
+libtool: install: ranlib /Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib/libsqlite3.a
+ /opt/homebrew/bin/gmkdir -p '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/bin'
+  /bin/sh ./libtool   --mode=install /opt/homebrew/bin/ginstall -c sqlite3 '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/bin'
+libtool: install: /opt/homebrew/bin/ginstall -c sqlite3 /Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/bin/sqlite3
+ /opt/homebrew/bin/gmkdir -p '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/include'
+ /opt/homebrew/bin/ginstall -c -m 644 sqlite3.h sqlite3ext.h '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/include'
+ /opt/homebrew/bin/gmkdir -p '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/share/man/man1'
+ /opt/homebrew/bin/ginstall -c -m 644 sqlite3.1 '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/share/man/man1'
+ /opt/homebrew/bin/gmkdir -p '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib/pkgconfig'
+ /opt/homebrew/bin/ginstall -c -m 644 sqlite3.pc '/Users/phillip/testapp/vendor/bundle/ruby/3.3.0/gems/sqlite3-1.7.2/ports/arm64-apple-darwin22.5.0/sqlite3/3.45.1/lib/pkgconfig'
