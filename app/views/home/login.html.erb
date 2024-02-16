@@ -17,7 +17,7 @@
                     <input type="text" id="username" name="username" placeholder="Enter Username"/>
                     <input type="password" id="password" name="password" placeholder="Enter Password"/>
                 <button type="submit">login</button>
-                <p class="message">Not registered? <a href="#"> Create an account</a></p>
+                <p class="message">Not registered? <%= link_to "Register", new_register_path, class:"nav-link" %></p>
                 </form>
             </div>
         </div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :registers
   resources :clients
   resources :orders
   get 'home/index'

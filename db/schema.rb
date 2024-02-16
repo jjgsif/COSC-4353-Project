@@ -10,22 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_12_180626) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_16_203312) do
   create_table "clients", force: :cascade do |t|
-    t.string "clientName", null: false
-    t.integer "ordersPlaced", null: false
-    t.boolean "newCustomer", null: false
-    t.datetime "dateJoined", null: false
+    t.string "clientName"
+    t.integer "ordersPlaced"
+    t.boolean "newCustomer"
+    t.datetime "dateJoined"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "company_name", null: false
-    t.boolean "InState", null: false
-    t.decimal "Profit_Margin", null: false
-    t.decimal "Gallon_Rqst", null: false
-    t.datetime "OrderDate", null: false
+    t.string "company_name"
+    t.boolean "InState"
+    t.decimal "Profit_Margin"
+    t.decimal "Gallon_Rqst"
+    t.datetime "OrderDate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "registers", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.integer "clientID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
