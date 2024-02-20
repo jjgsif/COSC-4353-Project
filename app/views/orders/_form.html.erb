@@ -1,3 +1,4 @@
+
 <%= form_with(model: order) do |form| %>
   <% if order.errors.any? %>
     <div style="color: red">
@@ -13,22 +14,27 @@
 
   <div>
     <%= form.label :company_name, style: "display: block" %>
-    <%= form.text_field :company_name %>
+    <%= form.text_field :company_name, required: true %>
   </div>
 
   <div>
     <%= form.label :InState, style: "display: block" %>
-    <%= form.check_box :InState %>
+    <%= form.check_box :InState%>
+  </div>
+  <div>
+    <%= form.label :Date, "Date", style: "display: block"%>
+    <%= form.date_field :OrderDate, min: 0.days.ago, required: true %>
+
   </div>
 
   <div>
     <%= form.label :Profit_Margin, style: "display: block" %>
-    <%= form.text_field :Profit_Margin %>
+    <%= form.text_field :Profit_Margin , required: true %>
   </div>
 
   <div>
     <%= form.label :Gallon_Rqst, style: "display: block" %>
-    <%= form.text_field :Gallon_Rqst %>
+    <%= form.text_field :Gallon_Rqst, required: true %>
   </div>
 
   <div>
