@@ -1,9 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: white"><%= notice %></p>
+<head>
+    <%= stylesheet_link_tag 'neworder' %>
+</head>
+<body>
+  <div class="order-form-container">
+    <%= render @order %>
 
-<%= render @order %>
-
-<div>
-  <%= link_to "Edit this order", edit_order_path(@order) %> |
-  <%= link_to "Back to orders", orders_path %>
-  <%= button_to "Destroy this order", @order, method: :delete %>
-</div>
+    <div>
+      <%= link_to "Edit this order", edit_order_path(@order) %> |
+      <%= link_to "Back to orders", orders_path %>
+      <%= button_to "Destroy this order", @order, method: :delete %>
+    </div>
+  </div>
+</body>
