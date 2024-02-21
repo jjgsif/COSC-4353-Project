@@ -1,9 +1,16 @@
-<h1>New order</h1>
+<head>
+    <%= stylesheet_link_tag 'neworder' %>
+</head>
+<body>
+  <div class="order-form-container">
+    <h1>New order</h1>
 
-<%= render "form", order: @order %>
+    <%= render "form", order: @order %>
 
-<br>
+    <br>
 
-<div>
-  <%= link_to "Back to orders", orders_path %>
-</div>
+    <div>
+      <%= link_to "Back to orders", orders_path %>
+    </div>
+  </div>
+</body>
