@@ -11,26 +11,40 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :company_name, style: "display: block" %>
-    <%= form.text_field :company_name %>
-  </div>
+  
+  <%= form.number_field :user_id , value: current_user.id, id: :orders_user_id, type: :hidden%>
+  
 
   <div>
-    <%= form.label :InState, style: "display: block" %>
-    <%= form.check_box :InState %>
+    Gallons Requested <br/>
+    <%= form.text_field :gallonsRequested %>
   </div>
-
+  <br/>
   <div>
-    <%= form.label :Profit_Margin, style: "display: block" %>
-    <%= form.text_field :Profit_Margin %>
+    Delivery Address <br/>
+    <%= form.text_field :deliveryAddress %>
   </div>
-
+  <br/>
+  <div style = "display: block">
+    City <br/>
+    <%= form.text_field :city %>
+  </div>
+  <br/>
   <div>
-    <%= form.label :Gallon_Rqst, style: "display: block" %>
-    <%= form.text_field :Gallon_Rqst %>
+    State <br/>
+    <%= form.text_field :state %>
   </div>
-
+  <br/>
+  <div>
+    ZIP Code <br/>
+    <%= form.number_field :zip %>
+  </div>
+  <br/>
+  <div>
+    Delivery Date <br/>
+    <%= form.date_field :deliveryDate %>
+  </div>
+  <br/>
   <div>
     <%= form.submit %>
   </div>
