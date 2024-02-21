@@ -21,10 +21,15 @@
     <%= form.label :InState, style: "display: block" %>
     <%= form.check_box :InState%>
   </div>
-  <div>
-    <%= form.label :Date, "Date", style: "display: block"%>
-    <%= form.date_field :OrderDate, min: 0.days.ago, required: true %>
 
+  <div>
+    <%= form.label :Date, "Delivery Date", style: "display: block"%>
+    <%= form.date_field :OrderDate, min: 0.days.ago, required: true %>
+  </div>
+
+  <div>
+    <%= form.label :Delivery_Add, "Delivery Address", style: "display: block" %>
+    <%= form.text_field :Delivery_Add, required: true %>
   </div>
 
   <div>
@@ -33,7 +38,7 @@
   </div>
 
   <div>
-    <%= form.label :Gallon_Rqst, style: "display: block" %>
+    <%= form.label :Gallon_Rqst, "Gallon Request", style: "display: block" %>
     <%= form.text_field :Gallon_Rqst, required: true %>
   </div>
 

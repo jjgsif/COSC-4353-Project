@@ -29,6 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_16_203312) do
     t.decimal "Profit_Margin"
     t.decimal "Gallon_Rqst"
     t.datetime "OrderDate"
+    t.string "Delivery_Add"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
