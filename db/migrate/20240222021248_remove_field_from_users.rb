@@ -8,3 +8,4 @@ class RemoveFieldFromUsers < ActiveRecord::Migration[7.1]
     remove_column :users, :zip, :integer
   end
 end
+

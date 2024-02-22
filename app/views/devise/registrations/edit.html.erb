@@ -9,36 +9,6 @@
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :full_name %><br />
-        <%= f.text_field :full_name, required: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :address_one %><br />
-        <%= f.text_field :address_one, required: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :address_two, "Address two (Optional)" %><br />
-        <%= f.text_field :address_two %>
-      </div>
-
-      <div class="field">
-        <%= f.label :city %><br />
-        <%= f.text_field :city, required: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :state %><br />
-        <%= f.text_field :state, required: true %>
-      </div>
-
-      <div class="field">
-        <%= f.label :zip %><br />
-        <%= f.number_field :zip, required: true, max: 99999 %>
-      </div>
-
-      <div class="field">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
