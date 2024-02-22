@@ -1,14 +1,19 @@
 <p style="color: green"><%= notice %></p>
+<head>
+    <%= stylesheet_link_tag 'neworder' %>
+</head>
+<body>
+  <div class="order-form-container">
+    <h1>Profile</h1>
 
-<h1>Profile</h1>
-
-<div id="profiles">
-  <% @profiles.each do |profile| %>
-    <%if profile.user_id == current_user.id%>
-      <%= render profile %>
-      <%= link_to "Edit your profile", edit_profile_path(profile) %>
-    <% end %>
-  <%end%>
-</div>
-
+    <div id="profiles">
+      <% @profiles.each do |profile| %>
+        <%if profile.user_id == current_user.id%>
+          <%= render profile %>
+          <%= link_to "Edit your profile", edit_profile_path(profile) %>
+        <% end %>
+      <%end%>
+    </div>
+  </div>
+</body>
 
