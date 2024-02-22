@@ -12,7 +12,7 @@
   <% end %>
 
   
-  <%= form.number_field :user_id , value: current_user.id, id: :profiles_user_id, type: :hidden%>
+  <%= form.number_field :user_id , value: current_user.id, id: :orders_user_id, type: :hidden%>
   
 
   <div>
@@ -26,23 +26,28 @@
   </div>
   <br/>
   <div>
+    <p class = "alert">If billing address and shipping address are different, edit below.</p>
+  </div>
+
+
+  <div>
     Delivery Address <br/>
-    <%= form.text_field :deliveryAddress %>
+    <%= form.text_field :deliveryAddress, value: current_user.profile.address_one %>
   </div>
   <br/>
   <div>
     City <br/>
-    <%= form.text_field :city %>
+    <%= form.text_field :city, value: current_user.profile.city %>
   </div>
   <br/>
   <div>
     State <br/>
-    <%= form.text_field :state %>
+    <%= form.text_field :state, value: current_user.profile.state %>
   </div>
   <br/>
   <div>
     ZIP Code <br/>
-    <%= form.number_field :zip %>
+    <%= form.number_field :zip, value: current_user.profile.zip %>
   </div>
   <br/>
   <div>
@@ -50,6 +55,8 @@
     <%= form.date_field :deliveryDate %>
   </div>
   <br/>
+ 
+  
   <div>
     <%= form.submit %>
   </div>
