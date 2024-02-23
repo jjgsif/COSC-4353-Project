@@ -19,3 +19,14 @@ body {
 .actions input[type="submit"] {
     margin-bottom: 20px; 
 }
+
+.button {
+    display: inline-block;
+    padding: 9px 10px;
+    background-color: #e7e7e7; /* Button background color */
+    color: #212529; /* Text color */
+    text-decoration: none;
+    border: 1px solid #212529;
+    border-radius: 5px;
+    cursor: pointer;
+  }
