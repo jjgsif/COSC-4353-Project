@@ -7,5 +7,7 @@
 one: {}
 # column: value
 #
-two: {}
+two:
+  email: MyString
+  encrypted_password: MyString
 # column: value
