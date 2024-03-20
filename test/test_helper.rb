@@ -16,3 +16,13 @@ module ActiveSupport
     # Add more helper methods to be used by all tests here...
   end
 end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
+
+  setup do
+      sign_in users(:one)
+  end
+end
+
+

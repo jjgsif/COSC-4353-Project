@@ -11,31 +11,32 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.number_field :user_id %>
-  </div>
+  
+    
+  <%= form.number_field :user_id, value: current_user.id, id: :orders_user_id, type: :hidden %>
+  
 
   <div>
-    <%= form.label :gallonsRequested, style: "display: block" %>
+    Gallons Requested <br/>
     <%= form.text_field :gallonsRequested %>
   </div>
 
-  <div>
-    <%= form.label :dateOrdered, style: "display: block" %>
-    <%= form.date_field :dateOrdered %>
-  </div>
+  
+    
+    <%= form.date_field :dateOrdered, value: DateTime.now, type: :hidden%>
+    <%= form.text_field :profitMargin, value: rand().round(2), type: :hidden %>
+  
 
   <div>
-    <%= form.label :deliveryDate, style: "display: block" %>
+    Delivery Date <br/>
     <%= form.date_field :deliveryDate %>
   </div>
-
+<br/>
   <div>
-    <%= form.label :deliveryAddress, style: "display: block" %>
-    <%= form.text_field :deliveryAddress %>
+    Delivery Address <br/>
+    <%= form.text_field :deliveryAddress%>
   </div>
-
+  
   <div>
     <%= form.label :city, style: "display: block" %>
     <%= form.text_field :city %>

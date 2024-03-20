@@ -1,14 +1,38 @@
 <p style="color: green"><%= notice %></p>
+<head>
+    <%= stylesheet_link_tag 'neworder'%>
 
-<h1>Orders</h1>
+<div class="order-form-container">
+  <h1> Orders </h1>
+  <table class = "table">
+    <thead>
+      <th scope="col">Price (in Thousands)</th>
+      <th scope="col">Gallons Requested</th>
+      <th scope="col">Profit Margin</th>
+      <th scope="col">Order Date </th>
+      <th scope="col">Delivery Date</th>
+      <th scope="col">Delivery Address</th>
+      <th scope="col">City</th>
+      <th scope="col">State</th>
+      <th scope="col">Zip Code</th>
+    </thead>
 
-<div id="orders">
-  <% @orders.each do |order| %>
-    <%= render order %>
-    <p>
-      <%= link_to "Show this order", order %>
-    </p>
-  <% end %>
+    <tbody>
+      <% @orders.each do |order| %>
+      <% if current_user.id == order.user_id %>
+      <tr>
+        <th scope="row">$<%=((rand()+rand(30)).round(2))%></th>
+        <td><%=order.gallonsRequested =%></td>
+        <td>orders.profitMargin</td>
+        <td><%=order.dateOrdered=%></td>
+        <td><%=order.deliveryDate=%></td>
+        <td><%=order.deliveryAddress=%></td>
+        <td><%=order.city=%></td>
+        <td><%=order.state=%></td>
+        <td><%=order.zip=%></td>
+      </tr>
+      <%end%>
+      <%end%>
 </div>
 
 <%= link_to "New order", new_order_path %>

@@ -325,6 +325,7 @@
       "/Users/johnsifuentes/Desktop/COSC-4353-Project/app/models/order.rb": {
         "lines": [
           1,
+          1,
           null
         ]
       },
@@ -335,7 +336,7 @@
           null
         ]
       },
-      "/Users/johnsifuentes/Desktop/COSC-4353-Project/app/controllers/profiles_controller.rb": {
+      "/Users/johnsifuentes/Desktop/COSC-4353-Project/app/controllers/orders_controller.rb": {
         "lines": [
           1,
           1,
@@ -364,24 +365,24 @@
           null,
           1,
           1,
-          0,
-          0,
-          null,
           2,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
           0,
           0,
           null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
           2,
           1,
+          null,
+          0,
+          0,
           null,
           null,
           null,
@@ -439,7 +440,7 @@
           null
         ]
       },
-      "/Users/johnsifuentes/Desktop/COSC-4353-Project/app/controllers/orders_controller.rb": {
+      "/Users/johnsifuentes/Desktop/COSC-4353-Project/app/controllers/profiles_controller.rb": {
         "lines": [
           1,
           1,
@@ -468,11 +469,11 @@
           null,
           1,
           1,
+          0,
+          0,
+          null,
           2,
           1,
-          null,
-          0,
-          0,
           null,
           null,
           null,
@@ -579,6 +580,6 @@
         }
       }
     },
-    "timestamp": 1710968715
+    "timestamp": 1710974545
   }
 }
