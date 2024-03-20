@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :profiles
-  devise_for :users
   resources :orders
+  devise_for :users
+  resources :profiles
   
 
   get 'home/index'

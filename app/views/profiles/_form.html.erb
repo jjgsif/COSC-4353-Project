@@ -11,36 +11,34 @@
     </div>
   <% end %>
 
-<%= form.number_field :user_id , value: current_user.id, id: :profiles_user_id, type: :hidden%>
-
   <div>
-    <%= form.label :full_name, style: "display: block" %>
-    <%= form.text_field :full_name, required: true %>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
   </div>
 
   <div>
-    <%= form.label :address_one, "Address one", style: "display: block; font-weight: bold;" %>
-    <%= form.text_field :address_one, required: true %>
+    <%= form.label :addressOne, style: "display: block" %>
+    <%= form.text_field :addressOne %>
   </div>
 
   <div>
-    <%= form.label :address_two, "Address two (Optional)", style: "display: block" %>
-    <%= form.text_field :address_two %>
+    <%= form.label :addressTwo, style: "display: block" %>
+    <%= form.text_field :addressTwo %>
   </div>
 
   <div>
-    <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city, required: true %>
+    <%= form.label :zipcode, style: "display: block" %>
+    <%= form.number_field :zipcode %>
   </div>
 
   <div>
     <%= form.label :state, style: "display: block" %>
-    <%= form.text_field :state, required: true %>
+    <%= form.text_field :state %>
   </div>
 
   <div>
-    <%= form.label :zip, style: "display: block" %>
-    <%= form.number_field :zip, required: true, max:99999 %>
+    <%= form.label :fullName, style: "display: block" %>
+    <%= form.text_field :fullName %>
   </div>
 
   <div>

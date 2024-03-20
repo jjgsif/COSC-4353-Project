@@ -1,19 +1,26 @@
-
 <div id="<%= dom_id order %>">
-  
+  <p>
+    <strong>User:</strong>
+    <%= order.user_id %>
+  </p>
 
   <p>
-    <strong>Gallons Requested:</strong>
+    <strong>Gallonsrequested:</strong>
     <%= order.gallonsRequested %>
   </p>
 
   <p>
-    <strong>Profit Margin:</strong>
-    <%= order.profitMargin %>
+    <strong>Dateordered:</strong>
+    <%= order.dateOrdered %>
   </p>
 
   <p>
-    <strong>Delivery Address:</strong>
+    <strong>Deliverydate:</strong>
+    <%= order.deliveryDate %>
+  </p>
+
+  <p>
+    <strong>Deliveryaddress:</strong>
     <%= order.deliveryAddress %>
   </p>
 
@@ -32,11 +39,4 @@
     <%= order.zip %>
   </p>
 
-  <p>
-    <strong>Delivery Date:</strong>
-    <%= order.deliveryDate %>
-  </p>
-   
-
 </div>
-

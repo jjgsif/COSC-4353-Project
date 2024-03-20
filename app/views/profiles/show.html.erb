@@ -1,16 +1,10 @@
-<p style="color: white"><%= notice %></p>
+<p style="color: green"><%= notice %></p>
 
+<%= render @profile %>
 
-<head>
-    <%= stylesheet_link_tag 'neworder' %>
-</head>
-<body>
-  <div class="order-form-container">
-    <%= render @profile %>
+<div>
+  <%= link_to "Edit this profile", edit_profile_path(@profile) %> |
+  <%= link_to "Back to profiles", profiles_path %>
 
-    <div>
-      <%= link_to "Edit this profile", edit_profile_path(@profile) %> |
-    </div>
-  </div>
-</body>
-
+  <%= button_to "Destroy this profile", @profile, method: :delete %>
+</div>

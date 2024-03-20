@@ -2,7 +2,7 @@ require "test_helper"
 
 class ProfilesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @profile = profiles(:one)
+    @profile = profiles(:valid)
   end
 
   test "should get index" do
@@ -17,7 +17,7 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create profile" do
     assert_difference("Profile.count") do
-      post profiles_url, params: { profile: { address_one: @profile.address_one, address_two: @profile.address_two, city: @profile.city, full_name: @profile.full_name, state: @profile.state, zip: @profile.zip } }
+      post profiles_url, params: { profile: { addressOne: @profile.addressOne, addressTwo: @profile.addressTwo, fullName: @profile.fullName, state: @profile.state, user_id: @profile.user_id, zipcode: @profile.zipcode } }
     end
 
     assert_redirected_to profile_url(Profile.last)
@@ -34,7 +34,7 @@ class ProfilesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update profile" do
-    patch profile_url(@profile), params: { profile: { address_one: @profile.address_one, address_two: @profile.address_two, city: @profile.city, full_name: @profile.full_name, state: @profile.state, zip: @profile.zip } }
+    patch profile_url(@profile), params: { profile: { addressOne: @profile.addressOne, addressTwo: @profile.addressTwo, fullName: @profile.fullName, state: @profile.state, user_id: @profile.user_id, zipcode: @profile.zipcode } }
     assert_redirected_to profile_url(@profile)
   end
 

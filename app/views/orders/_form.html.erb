@@ -11,52 +11,46 @@
     </div>
   <% end %>
 
-  
-  <%= form.number_field :user_id , value: current_user.id, id: :orders_user_id, type: :hidden%>
-  
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
 
   <div>
-    Gallons Requested <br/>
+    <%= form.label :gallonsRequested, style: "display: block" %>
     <%= form.text_field :gallonsRequested %>
   </div>
-  <br/>
-  <div>
-    Profit Margin <br/>
-    <%= form.text_field :profitMargin %>
-  </div>
-  <br/>
-  <div>
-    <p class = "alert">If billing address and shipping address are different, edit below.</p>
-  </div>
-
 
   <div>
-    Delivery Address <br/>
-    <%= form.text_field :deliveryAddress, value: current_user.profile.address_one %>
+    <%= form.label :dateOrdered, style: "display: block" %>
+    <%= form.date_field :dateOrdered %>
   </div>
-  <br/>
+
   <div>
-    City <br/>
-    <%= form.text_field :city, value: current_user.profile.city %>
-  </div>
-  <br/>
-  <div>
-    State <br/>
-    <%= form.text_field :state, value: current_user.profile.state %>
-  </div>
-  <br/>
-  <div>
-    ZIP Code <br/>
-    <%= form.number_field :zip, value: current_user.profile.zip %>
-  </div>
-  <br/>
-  <div>
-    Delivery Date <br/>
+    <%= form.label :deliveryDate, style: "display: block" %>
     <%= form.date_field :deliveryDate %>
   </div>
-  <br/>
- 
-  
+
+  <div>
+    <%= form.label :deliveryAddress, style: "display: block" %>
+    <%= form.text_field :deliveryAddress %>
+  </div>
+
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
+  </div>
+
+  <div>
+    <%= form.label :zip, style: "display: block" %>
+    <%= form.number_field :zip %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>

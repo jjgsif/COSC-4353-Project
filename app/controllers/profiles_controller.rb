@@ -1,6 +1,5 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /profiles or /profiles.json
   def index
@@ -66,6 +65,6 @@ class ProfilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.require(:profile).permit(:user_id, :full_name, :address_one, :address_two, :city, :state, :zip)
+      params.require(:profile).permit(:user_id, :addressOne, :addressTwo, :zipcode, :state, :fullName)
     end
 end

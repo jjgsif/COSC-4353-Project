@@ -15,12 +15,12 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "New order"
 
     fill_in "City", with: @order.city
-    fill_in "Clientid", with: @order.clientID
+    fill_in "Dateordered", with: @order.dateOrdered
     fill_in "Deliveryaddress", with: @order.deliveryAddress
     fill_in "Deliverydate", with: @order.deliveryDate
     fill_in "Gallonsrequested", with: @order.gallonsRequested
-    fill_in "Profitmargin", with: @order.profitMargin
     fill_in "State", with: @order.state
+    fill_in "User", with: @order.user_id
     fill_in "Zip", with: @order.zip
     click_on "Create Order"
 
@@ -33,12 +33,12 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "Edit this order", match: :first
 
     fill_in "City", with: @order.city
-    fill_in "Clientid", with: @order.clientID
+    fill_in "Dateordered", with: @order.dateOrdered
     fill_in "Deliveryaddress", with: @order.deliveryAddress
     fill_in "Deliverydate", with: @order.deliveryDate
     fill_in "Gallonsrequested", with: @order.gallonsRequested
-    fill_in "Profitmargin", with: @order.profitMargin
     fill_in "State", with: @order.state
+    fill_in "User", with: @order.user_id
     fill_in "Zip", with: @order.zip
     click_on "Update Order"
 

@@ -1,16 +1,10 @@
-<head>
-    <%= stylesheet_link_tag 'neworder' %>
-</head>
-<body>
-  <div class="order-form-container">
-    <h1>Editing profile</h1>
+<h1>Editing profile</h1>
 
-    <%= render "form", profile: @profile %>
+<%= render "form", profile: @profile %>
 
-    <br>
+<br>
 
-    <div>
-      <%= link_to "Show this profile", @profile %>
-    </div>
-  </div>
-</body>
+<div>
+  <%= link_to "Show this profile", @profile %> |
+  <%= link_to "Back to profiles", profiles_path %>
+</div>

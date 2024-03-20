@@ -14,12 +14,12 @@ class ProfilesTest < ApplicationSystemTestCase
     visit profiles_url
     click_on "New profile"
 
-    fill_in "Address one", with: @profile.address_one
-    fill_in "Address two", with: @profile.address_two
-    fill_in "City", with: @profile.city
-    fill_in "Full name", with: @profile.full_name
+    fill_in "Addressone", with: @profile.addressOne
+    fill_in "Addresstwo", with: @profile.addressTwo
+    fill_in "Fullname", with: @profile.fullName
     fill_in "State", with: @profile.state
-    fill_in "Zip", with: @profile.zip
+    fill_in "User", with: @profile.user_id
+    fill_in "Zipcode", with: @profile.zipcode
     click_on "Create Profile"
 
     assert_text "Profile was successfully created"
@@ -30,12 +30,12 @@ class ProfilesTest < ApplicationSystemTestCase
     visit profile_url(@profile)
     click_on "Edit this profile", match: :first
 
-    fill_in "Address one", with: @profile.address_one
-    fill_in "Address two", with: @profile.address_two
-    fill_in "City", with: @profile.city
-    fill_in "Full name", with: @profile.full_name
+    fill_in "Addressone", with: @profile.addressOne
+    fill_in "Addresstwo", with: @profile.addressTwo
+    fill_in "Fullname", with: @profile.fullName
     fill_in "State", with: @profile.state
-    fill_in "Zip", with: @profile.zip
+    fill_in "User", with: @profile.user_id
+    fill_in "Zipcode", with: @profile.zipcode
     click_on "Update Profile"
 
     assert_text "Profile was successfully updated"

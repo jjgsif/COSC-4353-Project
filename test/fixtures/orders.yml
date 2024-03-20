@@ -3,19 +3,19 @@
 one:
   user_id: 1
   gallonsRequested: 9.99
-  profitMargin: 9.99
+  dateOrdered: 2024-03-20
+  deliveryDate: 2024-03-20
   deliveryAddress: MyString
   city: MyString
   state: MyString
   zip: 1
-  deliveryDate: 2024-02-20
 
 two:
   user_id: 1
   gallonsRequested: 9.99
-  profitMargin: 9.99
+  dateOrdered: 2024-03-20
+  deliveryDate: 2024-03-20
   deliveryAddress: MyString
   city: MyString
   state: MyString
   zip: 1
-  deliveryDate: 2024-02-20

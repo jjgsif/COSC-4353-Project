@@ -10,36 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_22_022230) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_20_210417) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "orders", force: :cascade do |t|
+    t.integer "user_id"
     t.decimal "gallonsRequested"
-    t.decimal "profitMargin"
+    t.date "dateOrdered"
+    t.date "deliveryDate"
     t.string "deliveryAddress"
     t.string "city"
     t.string "state"
     t.integer "zip"
-    t.date "deliveryDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.boolean "In_State"
-    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.string "full_name"
-    t.string "address_one"
-    t.string "address_two"
-    t.string "city"
+    t.integer "user_id"
+    t.string "addressOne"
+    t.string "addressTwo"
+    t.integer "zipcode"
     t.string "state"
-    t.integer "zip"
+    t.string "fullName"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
