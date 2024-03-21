@@ -1,17 +1,18 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 valid:
-  user_id: 4
+  user_id: 1
   addressOne: "2707 Camden Hill Ln"
   addressTwo: ""
   zipcode: 77089
-  state: "TX"
+  city: "Houston"
+  state: "NC"
   fullName: "John S"
 
-two:
+invalid:
   user_id: 2
   addressOne: MyString
   addressTwo: MyString
   zipcode: 1
-  state: MyString
+  state: "MPX"
   fullName: MyString

@@ -1,6 +1,9 @@
 ENV["RAILS_ENV"] ||= "test"
 require 'simplecov'
-SimpleCov.start "rails"
+SimpleCov.start do
+  add_group "Models", "app/models"
+  add_group "Controllers", "app/controllers"
+end
 require_relative "../config/environment"
 require "rails/test_help"
 
@@ -18,7 +21,7 @@ module ActiveSupport
 end
 
 class ActionController::TestCase
-  include Devise::TestHelpers
+  Devise::Test::ControllerHelpers
 
   setup do
       sign_in users(:one)

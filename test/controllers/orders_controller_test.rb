@@ -7,18 +7,20 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get orders_url
+    get "/orders/"+@order.id.to_s
     assert_response :success
   end
 
   test "should get new" do
-    get new_order_url
+    sign_in users(:one)
+    get "/orders/new"
     assert_response :success
   end
 
   test "should create order" do
+    sign_in users(:one)
     assert_difference("Order.count") do
-      post orders_url, params: { order: { city: @order.city, dateOrdered: @order.dateOrdered, deliveryAddress: @order.deliveryAddress, deliveryDate: @order.deliveryDate, gallonsRequested: @order.gallonsRequested, state: @order.state, user_id: @order.user_id, zip: @order.zip } }
+      post orders_url, params: { order: { city: @order.city, dateOrdered: @order.dateOrdered, deliveryAddress: @order.deliveryAddress, deliveryDate: @order.deliveryDate, gallonsRequested: @order.gallonsRequested, state: @order.state, user_id: @order.user_id, zip: @order.zip, profitMargin: @order.profitMargin } }
     end
 
     assert_redirected_to order_url(Order.last)
@@ -30,6 +32,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
+    sign_in users(:one)
     get edit_order_url(@order)
     assert_response :success
   end
