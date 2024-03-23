@@ -1,0 +1,18 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid:
+  user_id: 1
+  addressOne: "2707 Camden Hill Ln"
+  addressTwo: ""
+  zipcode: 77089
+  city: "Houston"
+  state: "NC"
+  fullName: "John S"
+
+invalid:
+  user_id: 2
+  addressOne: MyString
+  addressTwo: MyString
+  zipcode: 1
+  state: "MPX"
+  fullName: MyString

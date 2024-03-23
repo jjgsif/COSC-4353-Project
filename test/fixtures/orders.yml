@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  user_id: 1
+  gallonsRequested: 9.99
+  dateOrdered: 2024-03-20
+  deliveryDate: 2024-03-20
+  deliveryAddress: MyString
+  city: Texas
+  state: Houston
+  zip: 1
+  profitMargin: 0.06
+  
+
+two:
+  id: 2
+  user_id: 1
+  gallonsRequested: 9.99
+  dateOrdered: 2024-03-20
+  deliveryDate: 2024-03-20
+  deliveryAddress: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  profitMargin: 0.06
+  

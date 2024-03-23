@@ -1,6 +1,13 @@
 ENV["RAILS_ENV"] ||= "test"
+require 'simplecov'
+SimpleCov.start do
+  add_group "Models", "app/models"
+  add_group "Controllers", "app/controllers"
+end
 require_relative "../config/environment"
 require "rails/test_help"
+
+
 
 module ActiveSupport
   class TestCase
@@ -9,7 +16,16 @@ module ActiveSupport
 
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
-
     # Add more helper methods to be used by all tests here...
   end
 end
+
+class ActionController::TestCase
+  Devise::Test::ControllerHelpers
+
+  setup do
+      sign_in users(:one)
+  end
+end
+
+

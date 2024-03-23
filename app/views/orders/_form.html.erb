@@ -1,4 +1,3 @@
-
 <%= form_with(model: order) do |form| %>
   <% if order.errors.any? %>
     <div style="color: red">
@@ -12,34 +11,45 @@
     </div>
   <% end %>
 
+  
+    
+  <%= form.number_field :user_id, value: current_user.id, id: :orders_user_id, type: :hidden %>
+  
+
   <div>
-    <%= form.label :company_name, style: "display: block" %>
-    <%= form.text_field :company_name, required: true %>
+    Gallons Requested <br/>
+    <%= form.text_field :gallonsRequested %>
+  </div>
+
+  
+    
+    <%= form.date_field :dateOrdered, value: DateTime.now, type: :hidden%>
+    <%= form.text_field :profitMargin, value: rand().round(2), type: :hidden %>
+  
+
+  <div>
+    Delivery Date <br/>
+    <%= form.date_field :deliveryDate %>
+  </div>
+<br/>
+  <div>
+    Delivery Address <br/>
+    <%= form.text_field :deliveryAddress%>
+  </div>
+  
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city %>
   </div>
 
   <div>
-    <%= form.label :InState, style: "display: block" %>
-    <%= form.check_box :InState%>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
   </div>
 
   <div>
-    <%= form.label :Date, "Delivery Date", style: "display: block"%>
-    <%= form.date_field :OrderDate, min: 0.days.ago, required: true %>
-  </div>
-
-  <div>
-    <%= form.label :Delivery_Add, "Delivery Address", style: "display: block" %>
-    <%= form.text_field :Delivery_Add, required: true %>
-  </div>
-
-  <div>
-    <%= form.label :Profit_Margin, style: "display: block" %>
-    <%= form.text_field :Profit_Margin , required: true %>
-  </div>
-
-  <div>
-    <%= form.label :Gallon_Rqst, "Gallon Request", style: "display: block" %>
-    <%= form.text_field :Gallon_Rqst, required: true %>
+    <%= form.label :zip, style: "display: block" %>
+    <%= form.number_field :zip %>
   </div>
 
   <div>

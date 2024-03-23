@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :registers
-  resources :clients
   resources :orders
+  devise_for :users
+  resources :profiles
+  
+
   get 'home/index'
   get 'home/login'
   root 'home#index'
