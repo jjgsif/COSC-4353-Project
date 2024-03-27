@@ -7,7 +7,8 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get "/orders/"+@order.id.to_s
+    sign_in users(:one)
+    get orders_url
     assert_response :success
   end
 
@@ -26,7 +27,15 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to order_url(Order.last)
   end
 
+  test "should not create order" do
+    sign_in users(:one)
+    post orders_url, params: { order: { city: "", dateOrdered: @order.dateOrdered, deliveryAddress: @order.deliveryAddress, deliveryDate: @order.deliveryDate, gallonsRequested: @order.gallonsRequested, state: @order.state, user_id: @order.user_id, zip: @order.zip } }
+    assert_response 422
+  end
+
+
   test "should show order" do
+    sign_in users(:one)
     get order_url(@order)
     assert_response :success
   end
@@ -38,11 +47,19 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update order" do
+    sign_in users(:one)
     patch order_url(@order), params: { order: { city: @order.city, dateOrdered: @order.dateOrdered, deliveryAddress: @order.deliveryAddress, deliveryDate: @order.deliveryDate, gallonsRequested: @order.gallonsRequested, state: @order.state, user_id: @order.user_id, zip: @order.zip } }
     assert_redirected_to order_url(@order)
   end
 
+test "should not update order" do
+    sign_in users(:one)
+    patch order_url(@order), params: { order: { city: "", dateOrdered: @order.dateOrdered, deliveryAddress: @order.deliveryAddress, deliveryDate: @order.deliveryDate, gallonsRequested: @order.gallonsRequested, state: @order.state, user_id: @order.user_id, zip: @order.zip } }
+    assert_response 422
+  end
+
   test "should destroy order" do
+    sign_in users(:one)
     assert_difference("Order.count", -1) do
       delete order_url(@order)
     end
