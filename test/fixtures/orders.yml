@@ -7,21 +7,18 @@ one:
   dateOrdered: 2024-03-20
   deliveryDate: 2024-03-20
   deliveryAddress: MyString
-  city: Texas
-  state: Houston
-  zip: 1
+  city: Houston
+  state: TX
+  zip: 77089
   profitMargin: 0.06
   
 
 two:
   id: 2
-  user_id: 1
   gallonsRequested: 9.99
-  dateOrdered: 2024-03-20
   deliveryDate: 2024-03-20
   deliveryAddress: MyString
   city: MyString
   state: MyString
-  zip: 1
-  profitMargin: 0.06
+  zip: 77089
   
