@@ -23,8 +23,7 @@
 
   
     
-    <%= form.date_field :dateOrdered, value: DateTime.now, type: :hidden%>
-    <%= form.text_field :profitMargin, value: rand().round(2), type: :hidden %>
+  <%= form.date_field :dateOrdered, value: DateTime.now, type: :hidden%>
   
 
   <div>
@@ -51,7 +50,11 @@
     <%= form.label :zip, style: "display: block" %>
     <%= form.number_field :zip %>
   </div>
+  
+  <button id="getQuoteButton" type="submit">Get Quote</button>
 
+  <div id="quoteResult"></div>
+  
   <div>
     <%= form.submit %>
   </div>
