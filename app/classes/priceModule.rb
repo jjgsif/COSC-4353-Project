@@ -14,8 +14,8 @@ class PriceModule
   end
 
   def calculate_total_amount_due(gallons_requested)
-    total_amount_due = gallons_requested * suggested_price_per_gallon
-    total_amount_due # No need to round here, already rounded in calculate_price_per_gallon
+    total_amount_due = gallons_requested * calculate_price_per_gallon
+    total_amount_due.round(2) # No need to round here, already rounded in calculate_price_per_gallon
   end
 
   private

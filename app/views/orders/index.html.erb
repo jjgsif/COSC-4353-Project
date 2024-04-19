@@ -6,9 +6,9 @@
   <h1> Orders </h1>
   <table class = "table">
     <thead>
-      <th scope="col">Price (in Thousands)</th>
-      <th scope="col">Gallons Requested</th>
-      <th scope="col">Profit Margin</th>
+      <th scope="col">Price per Gallon</th>
+      <th scope="col">Gallon(s) Requested</th>
+      <th scope="col">Total Amount Due</th>
       <th scope="col">Order Date </th>
       <th scope="col">Delivery Date</th>
       <th scope="col">Delivery Address</th>
@@ -25,7 +25,7 @@
       <tr>
         <th scope="row">$<%= order.calculate_price_per_gallon %></th>
         <td><%=order.gallonsRequested =%></td>
-        <td><%=order.profitMargin=%></td>
+        <td><%=order.calculate_total_amount_due=%></td>
         <td><%=order.dateOrdered=%></td>
         <td><%=order.deliveryDate=%></td>
         <td><%=order.deliveryAddress=%></td>
