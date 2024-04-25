@@ -1,5 +1,10 @@
 class Profile < ApplicationRecord
     belongs_to :user
+    @states = ["AL", "AK", "AZ", "AR", "TX", "CO", "CT", "CA","DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC","ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "UT", "VT", "VA", "WA", "WV", "WI","WY"]
+    
+    def self.state
+        @state
+    end
 
     validates :fullName, presence: true
     validates :addressOne, presence: true
