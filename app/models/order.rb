@@ -9,13 +9,13 @@ class Order < ApplicationRecord
     validates :zip, length: { is: 5 }, presence: true
     # Method to calculate price per gallon
     def calculate_price_per_gallon
-        price_module = PriceModule.new(state, gallonsRequested, user_id)
+        price_module = PriceModule.new(state, gallonsRequested, user_id, id)
         price_module.calculate_price_per_gallon
     end
 
     # Method to calculate total amount due
     def calculate_total_amount_due
-        price_module = PriceModule.new(state, gallonsRequested, user_id)
+        price_module = PriceModule.new(state, gallonsRequested, user_id, id)
         price_module.calculate_total_amount_due(gallonsRequested)
     end
 end

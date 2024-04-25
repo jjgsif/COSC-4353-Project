@@ -1,8 +1,8 @@
 class PriceModule
-  def initialize(location, gallons_requested, user_id)
+  def initialize(location, gallons_requested, user_id, id)
     @current_price_per_gallon = 1.50
     @location_factor = location == "TX" ? 0.02 : 0.04
-    @rate_history_factor = has_rate_history?(user_id) ? 0.01 : 0.00
+    @rate_history_factor = has_rate_history?(user_id, id) ? 0.01 : 0.00
     @gallons_requested_factor = gallons_requested > 1000 ? 0.02 : 0.03
     @company_profit_factor = 0.10
   end
@@ -20,8 +20,8 @@ class PriceModule
 
   private
 
-  def has_rate_history?(user_id)
-    if Order.where(user_id: user_id).count > 1 
+  def has_rate_history?(user_id, id)
+    if Order.where(user_id: user_id).count > 1 && Order.where(user_id: user_id)[0].id != id
       true 
     else 
       false 
