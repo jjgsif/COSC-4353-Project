@@ -20,8 +20,8 @@
     </thead>
 
     <tbody>
-      <% @orders.each do |order| %>
-      <% if current_user.id == order.user_id %>
+      <% current_user.orders.each do |order| %>
+      
       <tr>
         <th scope="row">$<%= order.calculate_price_per_gallon %></th>
         <td><%=order.gallonsRequested =%></td>
@@ -38,7 +38,7 @@
         
       </tr>
       <%end%>
-      <%end%>
+      
 </div>
 
 <%= link_to "New order", new_order_path %>

@@ -21,6 +21,10 @@ class PriceModule
   private
 
   def has_rate_history?(user_id)
-    Order.exists?(user_id: user_id)
+    if Order.where(user_id: user_id).count > 1 
+      true 
+    else 
+      false 
+    end
   end
 end
