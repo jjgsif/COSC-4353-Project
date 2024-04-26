@@ -12,8 +12,8 @@
   <% end %>
 
   <div>
-    
-    <%= form.number_field :user_id, value: current_user.id, type: :hidden%>
+    <%= form.label :user_id, "Username", style: "display: block" %>
+    <%= form.number_field :user_id %>
   </div>
 
   <div>
@@ -33,13 +33,12 @@
 
   <div>
     <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city%>
+    <%= form.text_field :city %>
   </div>
 
   <div>
     <%= form.label :state, style: "display: block" %>
-    <% @states = Order.state %>
-<%= form.select(:State, @states, prompt: 'State') %>
+    <%= form.text_field :state %>
   </div>
 
   <div>

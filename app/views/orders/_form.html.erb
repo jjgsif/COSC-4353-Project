@@ -14,6 +14,7 @@
   
     
   <%= form.number_field :user_id, value: current_user.id, id: :orders_user_id, type: :hidden %>
+  
 
   <div>
     Gallons Requested <br/>
@@ -32,22 +33,22 @@
 <br/>
   <div>
     Delivery Address <br/>
-    <%= form.text_field :deliveryAddress, value: current_user.profile.addressOne, :readonly => true%>
+    <%= form.text_field :deliveryAddress%>
   </div>
   
   <div>
     <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city, value: current_user.profile.city, :readonly => true%>
+    <%= form.text_field :city %>
   </div>
-  <% @states = Order.state %>
+
   <div>
-  <%= form.label :State, style: "display: block" %>
-  <%= form.text_field :state, value: current_user.profile.state, :readonly => true%>
+    <%= form.label :state, style: "display: block" %>
+    <%= form.text_field :state %>
   </div>
 
   <div>
     <%= form.label :zip, style: "display: block" %>
-    <%= form.text_field :zip, value: current_user.profile.zipcode, :readonly => true%>
+    <%= form.number_field :zip %>
   </div>
   
   <button id="getQuoteButton" type="submit">Get Quote</button>
